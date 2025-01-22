@@ -15,7 +15,7 @@ class PrenotamiScraper {
 
   async init() {
     this.browser = await chromium.launch({
-      headless: false, // Set to true in production
+      headless: true, 
     });
     const context = await this.browser.newContext();
     this.page = await context.newPage();
